@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+
+<body onload="shows_form_part(1)">
+
+<form>
+
+
+<div id="form_part1">
+Part 1<br>
+    <p>
+    Name: <input type="text" id="name" name="textname" /><p id="errorname" style="display:none;">Please enter your name.</p>
+    </p>
+    <button type="button" onclick="shows_form_part(2)">&raquo;</button>
+</div>
+
+
+<div id="form_part2">
+Part 2<br>
+<label for="choose">would you kill to survive?</label>
+    Yes <input type="radio" id="choice" name="num2" required>
+    No <input type="radio" id="choice" name="num2"> <br>
+    <button type="button" onclick="shows_form_part(1)">&laquo;</button>
+    <button type="button" onclick="shows_form_part(3)">&raquo;</button>
+</div>
+
+
+<div id="form_part3">
+Part 3<br>
+    <label for="choose">would you eat a live animal?</label>
+    <select name="animals" id="num3">
+        <option value="yes">if its so i can live</option>
+        <option value="no">i'd never harm a life</option>
+        <option value="Big-no">what is wrong with you</option>
+        <option value="Big-yes">*evil grin*</option>
+    </select><br>
+    <button type="button" onclick="shows_form_part(2)">&laquo;</button>
+    <button type="button" onclick="shows_form_part(4)">&raquo;</button>
+</div>
+
+
+<div id="form_part4">
+Part 4<br>
+<label for="choose">Select your favorite color</label>
+<input type="color" id="num4" name="favcolor" value="#cc0099"> <br>
+    <button type="button" onclick="shows_form_part(3)">&laquo;</button>
+    <button type="button" onclick="shows_form_part(5)">&raquo;</button>
+</div>
+
+
+<div id="form_part5">
+Part 5<br>
+    <label for="choose">which is better vanilla or chocolate?</label>
+    type your answer<input id="num5" pattern="vanilla|chocolate" required>
+    <br>
+    <button type="button" onclick="shows_form_part(4)">&laquo;</button>
+    <button type="button" onclick="shows_form_part(6)">&raquo;</button>
+</div>
+
+
+<div id="form_part6">
+Part 6<br>
+    <label for="number">what is the square root of 64?</label>
+    <input type="number" value="1" id="num6" min="1" max="10" required><br>
+    <button type="button" onclick="shows_form_part(5)">&laquo;</button>
+    <button type="button" onclick="submit_form()">Submit</button>
+</div>
+</form>
+
+
+<!-- test code -->
+<h1>Quiz on Important Facts Below (v) with requirements above (^)</h1>
+<div class="quiz-container">
+  <div id="quiz"></div>
+</div>
+<button id="previous">Previous Question</button>
+<button id="next">Next Question</button>
+<button id="submit">Submit Quiz</button>
+<div id="results"></div>
+
+<script src="./script.js"></script>
+</body>
+</html>
